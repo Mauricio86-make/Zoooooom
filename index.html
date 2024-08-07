@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>DevClub - Burguer</title>
+</head>
+
+<body>
+    <div class="container-buttons">
+        <button class="show-all">Mostrar tudo<br>ForHeach</button>
+        <button class="map-all">Mapear<br>Map</button>
+        <button class="sum-All">Somar tudo<br>Reduce</button>
+        <button class="filter-all">Filtrar tudo<br>Filter</button>
+    </div>
+
+    <ul>
+        
+    </ul>
+</body>
+<script src="./Products.js"></script>
+<script src="./scripts.js"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {                                      /*DANDO CARACTERISTICAS A TUDO*/
+    margin: 0;                           /*ZERANDO AS CARACTERISTICAS DO HTML*/
+    padding: 0;                          /*ZERANDO AS CARACTERISTICAS DO HTML*/
+    box-sizing: border-box;              /*PARA PODER MODIFICAR OS ITEM DE LUGAR. ORIENTAÇÃO E LUGAR*/
+    font-family: "Poppins", sans-serif;  /*FONTE PRINCIPAL QUE VAI SER USSADA*/
+}
+
+body {                                   /*CORPO DA ESTRUTURA HTML*/
+    background-color: #000000;         /*COLOR DE FUNDO DO BODY SERA #000000*/
+}
+
+.container-buttons {                     /*CLASSE QUE FOI DESTINADA A OS BOTOES*/
+    margin: 30px 0;                      /*MARGIN 30px ACIMA E BAIXO E 0 DOS LADOS*/
+    display: flex;                       /*DISPLAY FLEX ACTIVA FERRAMENTAS COMO AS PROXIMAS DUAS ABAIXO*/   
+    justify-content: center;             /*ALINHAR AO CENTRO NA HORIZONTAL*/
+    align-items: center;                 /*ALINHAR AO CENTRO NA VERTICAL*/
+    gap: 20px;                           /*ESPAÇO ENTRE OS ITENS*/
+}
+
+button {                                 /*BOTOES QUE TEM O SITE COM AS INFORMAÇOES*/
+    background-color: #79cb15;         /*COLOR DE FUNDO DOS BOTOES SERA #79cb15*/
+    border: none;                        /*DESACTIVAR A BORDA QUE TRAS POR DEFECTO*/
+    border-radius: 5px;                  /*ARREDONDAR AS ESQUINAS DO BUTTON*/
+    color: black;                      /*COLOR DA FONTE DO BUTTON*/
+    padding: 10px;                       /*TAMANHO INTERNO DO BUTTON*/
+    cursor: pointer;                     /*CURSOR COM A MAOZINHA*/
+    font-weight: bold;                   /*LETRA DO BUTTON MAIS GROSSA*/
+    width: 110px;                        /*TAMANHO DOS BOTOES PARA FICAR IGUAIS*/
+    transition: transform 0.5s ease;     /*TRANSIÇÃO PARA TRANSFORMAR UM EVENTO DE SCALE*/
+}
+
+.container-buttons button:hover {        /*ACCION PARA TRANSFORMAR A ESCALA NA HORA DE PASSAR O CURSOR*/
+    transform: scale(1.3);
+}
+button:hover {   
+    background-color:black;                        /*AVTIVIDADE QUE ACONTECE NA HORA DE PASSAR O CURSOR ENCIMA DO BUTTON*/
+    opacity: 0.8;                        /*OPACIDADE QUE VAI TER O BUTTON NA HORA DE SER PASSADO PELO CURSOR*/
+    color: #79cb15;                    /*MUDAR A COR DA LETRA NA HORA DE PASSAR O CURSOR POR CIMA DO BUTÃO*/
+}
+
+
+ul {                                          /*LISTA NÃO ORDENADA*/
+    list-style: none;                         /*TIRAS AS BOLINHAS QUE APARECEM NUMA LISTA */
+    display: grid;                            /*PARA CONSEGUIR MODIFICAR QUANTAS COLUNAS OU LINHAS VOCÊ QUER*/
+    grid-template-columns: 200px 200px 200px; /*QUERO 3 COLUNAS DE 200px CADA COLUNA*/
+    gap: 20px;                                /*ESPAÇO ENTRE CADA ITEM, NESTE CASO COLUNA*/
+    justify-content: center;                  /*ALINHAR AO CENTRO NA HORIZONTAL*/
+}
+
+
+li {                                      /*LISTA DE ITEMS QUE TENHO NA LISTA NÃO ORDENADA*/
+    border: 2px solid #8133ff;          /*BORDA DE 2px QUE SEJA SOLIDA E COM COLOR #8133ff*/
+    border-radius: 5px;                   /*ARREDONDAR AS ESQUINAS DO ITEM*/
+    padding: 5px;                         /*TAMANHO INTERNO PARA OS ITEMS NÃO FICAR COLADO DOS LADOS*/
+    cursor: pointer;                      /*CURSOR COM A MAOZINHA*/
+    transition: transform 0.3s ease;      /*TRANSIÇÃO PARA TRANSFORMAR UM EVENTO DE SCALE*/
+}
+li:hover {                                /*AVTIVIDADE QUE ACONTECE NA HORA DE PASSAR O CURSOR ENCIMA DO BUTTON*/
+    transform: scale(1.1);                /*ACCION PARA TRANSFORMAR A ESCALA NA HORA DE PASSAR O CURSOR*/
+}
+
+img {                                     /*IMAGEM DO LANCHE*/
+    width: 100%;                          /*VAI OCUPAR O 100% DE ESPAÇO DISPONIVEL PARA ELA*/
+    border-radius: 5px;                   /*ARREDONDAR AS ESQUINAS DA IMAGEM*/
+}
+
+p {                                       /*PARAGRAFOS COM O NOME DO LANCHE*/
+    color: #ffffff;                     /*COLOR DA FONTE DO PARAGRAFO SERA #ffffff*/
+}
+
+.item-price {                             /*CLASSE DO PARAGRAFO DO VALOR DO LANCHE*/
+    font-weight: bold;                    /*ESTILO DA FONTE SERA MAIS GROSSA*/
+    color: #79cb15                      /*COLOR DA FONTE SERA #79cb15*/
+}
+</style>
+</html>
